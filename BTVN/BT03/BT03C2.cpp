@@ -1,16 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-int main() {
+int main(){
     string t;
     cin >> t;
-    bool sym = true;
+    int dem=0;
     for (int i = 0; i< t.size()/2; ++i) {
         if(t[i] != t[t.size()-1-i]) {
-            sym = false;
-            break;
+            dem++;
         }
     }
-    cout << sym;
+    if(dem==0){cout<< "yes";}
+    else {cout<< "no";}
 }
