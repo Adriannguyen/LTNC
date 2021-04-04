@@ -2,7 +2,7 @@
 using namespace std;
 
 char* weird_string() {
-   char c[] = “123345”;
+   char c[] = '123345';
    return c;
 }
 

@@ -7,4 +7,5 @@ B2.
 *p = 5;
 
 B3.
-con tro khong dung kieu
+con trỏ ko đúng kiểu
+
