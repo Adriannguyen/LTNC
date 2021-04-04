@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//code tim duoc tren mang, van chua hieu dc
 int n;
 bool a[100];
 
@@ -28,3 +27,4 @@ int main(){
     cin >> n;
     recurse(1);
 }
+

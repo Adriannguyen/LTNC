@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int i = 0;
 
-void deQuy(){
+void f(){
+    int i = 0;
     int arr[10000];
-    cout << i++ << endl;;
-    deQuy();
+    cout << ++i << endl;;
+    f();
 }
 
 int main(){
-    deQuy();
+    int i = 0;
+    f();
 }
+
 
 
