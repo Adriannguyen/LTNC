@@ -1,15 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int soLanTruoc(int a){
+    if (a%2==0){
+        return (a/2);
+    } else {
+        return ((a-1)/2);
+    }
+}
+
+int soLanSau(int a, int b){
+    if (a%2==0){
+        return ((b-a)/2);
+    } else {
+        return ((b+1-a)/2);
+    }
+}
+
 int main(){
     int n, p;
     cin >> n >> p;
 
-    int dem=0;
-    for (int i=1; i<n+1; ++i){
-        if (i%2==0 && i<=p){
-            dem ++;
-        }
+    if (soLanTruoc(p) < soLanSau(p,n)){
+        cout << soLanTruoc(p);
+    } else {
+        cout << soLanSau(p,n);
     }
-    cout << dem;
 }

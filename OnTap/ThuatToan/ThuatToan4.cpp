@@ -1,36 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void nhapDem(int a[], int n){
-    for (int i=0; i<n; ++i){
-        a[i] = 0;
-        cout << a[i];
+void giamDan(int a[], int n){
+    int tg=0;
+    for (int i=0; i<n-1; ++i){
+        for (int j=i+1; j<n; ++j){
+            if (a[i]<a[j]){
+                tg=a[i];
+                a[i]=a[j];
+                a[j]=tg;
+            }
+        }
     }
+    cout << n-a[0];
 }
+
 int main(){
-    int n;
-    cin >> n;
-    int dem[n];
-    nhapDem(dem,n);
-    /*int n;
+    int n,s;
     cin >> n;
 
-    int a[n];
-    for (int i=0; i<n; i++){
+    int dem[n], a[n];
+    for (int i=0; i<n; ++i){
+        dem[i]=1;
+    }
+
+    for (int i=0; i<n; ++i){
         cin >> a[i];
     }
 
-    int dem[n];
-    for (int i=0; i<n; ++i){
-        for (int j=0; j<n; ++j){
-            if (a[i]=a[j]){
+    for (int i=0; i<n-1; ++i){
+        for (int j=i+1; j<n; ++j){
+            if (a[i]==a[j]){
                 dem[i]++;
             }
         }
     }
 
-    for (int i=0; i<n; i++){
-        cout << dem[i] << endl;
-    }
-    */
+    giamDan(dem, n);
+
 }
